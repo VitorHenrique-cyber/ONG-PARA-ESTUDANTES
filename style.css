@@ -1,0 +1,328 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: rgba(240, 248, 255, 0.83);
+    font-family: "Poppins", sans-serif;
+}
+
+/* =========================
+   HEADER
+   ========================= */
+
+header {
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.logotipo {
+    width: 200px;
+}
+
+/* Menu normal */
+
+header ul {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 16px 20px;
+    border-radius: 12px;
+}
+
+header li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+header li a:hover {
+    color: #16A34A;
+}
+
+/* =========================
+   BOTÃO HAMBÚRGUER
+   ========================= */
+
+.menu-toggle {
+    display: none;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 28px;
+    color: black;
+
+    padding: 8px 15px;
+
+    border: none;
+    border-radius: 12px;
+
+    background-color: #16A34A;
+
+    cursor: pointer;
+}
+
+/* =========================
+   BOTÕES
+   ========================= */
+
+button {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    color: black;
+
+    padding: 10px 20px;
+
+    border: none;
+    border-radius: 12px;
+
+    background-color: #16A34A;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #22c55e;
+}
+
+/* =========================
+   SEÇÕES
+   ========================= */
+
+section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.item1 {
+    color: #F3F4F6;
+    background-color: black;
+}
+
+/* =========================
+   TÍTULOS
+   ========================= */
+
+.nome1 {
+    color: #F3F4F6;
+    font-size: 100px;
+}
+
+.nome2 {
+    color: #16A34A;
+    font-size: 50px;
+}
+
+.nome3 {
+    color: #FFFF00;
+    font-size: 45px;
+}
+
+.nome4 {
+    color: #FFA500;
+    font-size: 40px;
+}
+
+/* =========================
+   BOTÕES DE OPÇÕES
+   ========================= */
+
+.botao2 {
+    display: flex;
+    flex-direction: column;
+
+    width: 180px;
+
+    gap: 10px;
+
+    justify-content: center;
+}
+
+/* =========================
+   FORMULÁRIO
+   ========================= */
+
+.container {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+    max-width: 500px;
+}
+
+input {
+    background-color: #dacfcf;
+
+    padding: 10px;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 16px;
+}
+
+/* ==================================================
+   TABLET / NOTEBOOK
+   ================================================== */
+
+@media screen and (max-width: 1024px) {
+
+    .nome1 {
+        font-size: 70px;
+    }
+
+    .nome2 {
+        font-size: 40px;
+    }
+
+    .nome3 {
+        font-size: 35px;
+    }
+
+    .nome4 {
+        font-size: 32px;
+    }
+
+    header ul {
+        gap: 12px;
+    }
+
+}
+
+/* ==================================================
+   CELULAR GRANDE / TABLET
+   ================================================== */
+
+@media screen and (max-width: 768px) {
+
+    /* Mostra o botão hambúrguer */
+
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Esconde o menu horizontal */
+
+    header ul {
+        position: absolute;
+
+        top: 100%;
+        right: 20px;
+
+        width: 220px;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 10px;
+
+        padding: 20px;
+
+        background-color: #151515;
+
+        /* Menu começa escondido */
+        opacity: 0;
+        visibility: hidden;
+
+        transform: translateY(-10px);
+
+        /* Animação */
+        transition:
+            opacity 0.3s ease,
+            transform 0.3s ease,
+            visibility 0.3s ease;
+
+        z-index: 100;
+    }
+
+    /* Quando o JavaScript adiciona .active */
+
+    header ul.active {
+        opacity: 1;
+
+        visibility: visible;
+
+        transform: translateY(0);
+    }
+
+    header li {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    header li a {
+        display: block;
+
+        padding: 10px;
+    }
+
+    .nome1 {
+        font-size: 50px;
+    }
+
+    .nome2 {
+        font-size: 35px;
+    }
+
+    .nome3 {
+        font-size: 30px;
+    }
+
+    .nome4 {
+        font-size: 28px;
+    }
+
+}
+
+/* ==================================================
+   CELULAR
+   ================================================== */
+
+@media screen and (max-width: 480px) {
+
+    header {
+        padding: 10px;
+    }
+
+    .logotipo {
+        width: 140px;
+    }
+
+    header ul {
+        right: 10px;
+
+        width: calc(100% - 20px);
+    }
+
+    .nome1 {
+        font-size: 38px;
+    }
+
+    .nome2 {
+        font-size: 30px;
+    }
+
+    .nome3 {
+        font-size: 27px;
+    }
+
+    .nome4 {
+        font-size: 25px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+
+}

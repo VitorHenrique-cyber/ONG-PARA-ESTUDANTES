@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <title>ONG PARA ESTUDANTES</title>
+</head>
+
+<body>
+
+    <header>
+
+        <img class="logotipo" src="visual/capa do projeto.jpeg" alt="Esta é a logo da ONG">
+
+        <!-- Botão do menu hambúrguer -->
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+            ☰
+        </button>
+
+        <nav>
+            <ul id="menu">
+                <li><a href="#resumo">RESUMO</a></li>
+                <li><a href="#objetivo">OBJETIVO</a></li>
+                <li><a href="#contato">CONTATO</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <section id="resumo">
+
+        <div>
+
+            <h1 class="nome1">ONG PARA ESTUDANTES</h1>
+
+            <p>
+                A ONG que realiza sonhos de todos os estudantes do Brasil
+            </p>
+
+            <div class="botao2">
+
+                <button>FACULDADE</button>
+                <button>CURSOS</button>
+                <button>CIDADE</button>
+                <button>PAÍS</button>
+                <button>CARGA HORARIA</button>
+                <button>MODALIDADE</button>
+                <button>HORARIO</button>
+                <button>VALOR</button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <h3 class="nome2" id="objetivo">OBJETIVO</h3>
+
+    <section>
+        <p>
+            O objetivo desta ONG é financiar estudantes para que consigam
+            ter um ensino de qualidade, onde poderão aprender sem se
+            preocupar com o financeiro.
+        </p>
+    </section>
+
+
+    <h3 class="nome3" id="contato">CONTATO</h3>
+
+    <section class="item1">
+
+        <p>
+            Para entrar em contato conosco, ligue pelo número:
+        </p>
+
+        <p>
+            <strong>Telefone:</strong> (11) 99999-9999
+        </p>
+
+        <h2 class="nome4">LOGAR NA ONG</h2>
+
+        <hr>
+
+        <form action="">
+            
+
+            <div class="container">
+
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" id="nome" required>
+<button onclick="SalvarNome()">SalvarNome</button>
+
+                <label for="cpf">CPF:</label>
+                <input type="text" name="cpf" id="cpf" pattern="\d{3}.\d{3}.\d{3}-\d{2}" placeholder="000.000.000-00">
+<button onclick="SalvarCPF()">SalvarCPF</button>
+
+                <label for="telefone">Telefone:</label>
+                <input type="text" name="telefone" id="telefone" pattern="\(\d{2}\)\d{5}-\d{4}"
+                    placeholder="(99)99999-9999">
+<button onclick="Salvartelefone()">Salvartelefone</button>
+
+                <label for="CEP">CEP:</label>
+                <input type="text" name="CEP" id="CEP" pattern="\d{5}-\d{3}" placeholder="88888-888">
+<button onclick="SalvarCEP()">SalvarCEP</button>
+
+            </div>
+
+            
+
+        </form>
+
+        <hr>
+
+    </section>
+
+    <main id="app"></main>
+
+    <script src="script.js"></script>
+
+    <script>
+
+function SalvarNome() {
+
+let nome = document.getElementById("nome").value
+localStorage.setItem("nome", nome);
+
+
+    
+}
+
+ localStorage.setItem(
+            "dadosUsuario",
+            JSON.stringify(dadosUsuario)
+        );
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+   
+</body>
+
+</html>
